@@ -1,6 +1,7 @@
 # Joao Delivery App: Fome Zero
 
-
+![GitHub language count](https://img.shields.io/github/languages/count/lucaomartins/joao-delivery-app)
+![GitHub top language](https://img.shields.io/github/languages/top/lucaomartins/joao-delivery-app)
 
 Bem vindo ao [Joao Delivery](#https:/)!   
 
@@ -56,7 +57,8 @@ Temos que pensar mais um pouco!!!!
 ### Tecnologias Implementadas    
 
 - Kotlin
-- Python
+- Flask
+- Firebase
 
 ---
 
@@ -67,8 +69,9 @@ Temos que pensar mais um pouco!!!!
 * [Jack Tanaka](https://github.com/developersteve/)
 * [Lucas Martins](https://github.com/lucaomartins/)
 * [Marcus Mariano](https://github.com/marcusmariano)
-* [Nicole](https://developer.ibm.com/profiles/drnugent/)
+* [Nicole Silveira Manoel](https://www.linkedin.com/in/nicole-silveira-manoel-b04b8b159/)
 
+ 
 ---
 
 ## License
