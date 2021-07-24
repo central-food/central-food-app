@@ -3,7 +3,7 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/lucaomartins/joao-delivery-app)
 ![GitHub top language](https://img.shields.io/github/languages/top/lucaomartins/joao-delivery-app)
 
-Bem vindo ao [Joao Delivery](#https:/)!   
+Bem vindo ao [João Food](#https:/)!   
 
 ---
 
