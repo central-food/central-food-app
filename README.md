@@ -66,7 +66,7 @@ Temos que pensar mais um pouco!!!!
 ## Autores
 
 * [Ana Valente](https://github.com/AnaVSSCaldeira)
-* [Jack Tanaka](https://github.com/developersteve/)
+* [Jack Tanaka](https://www.linkedin.com/in/jackeline-tanaka/)
 * [Lucas Martins](https://github.com/lucaomartins/)
 * [Marcus Mariano](https://github.com/marcusmariano)
 * [Nicole Silveira Manoel](https://www.linkedin.com/in/nicole-silveira-manoel-b04b8b159/)
