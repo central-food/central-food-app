@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_navigation"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/chooseAccountTypeFragment">
 
     <fragment
         android:id="@+id/chooseAccountTypeFragment"
@@ -27,13 +27,4 @@
         android:name="br.com.fomezero.joaofood.presentation.login.ong.LoginOngFragment"
         android:label="fragment_login_ong"
         tools:layout="@layout/fragment_login_ong" />
-    <fragment
-        android:id="@+id/splashFragment"
-        android:name="br.com.fomezero.joaofood.presentation.splash.SplashFragment"
-        android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
-        <action
-            android:id="@+id/action_splashFragment_to_chooseAccountTypeFragment"
-            app:destination="@id/chooseAccountTypeFragment" />
-    </fragment>
 </navigation>

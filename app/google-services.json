@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "117621639627",
+    "project_id": "nimble-perigee-320718",
+    "storage_bucket": "nimble-perigee-320718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117621639627:android:9b1e6ac30267a5a9390e4e",
+        "android_client_info": {
+          "package_name": "br.com.fomezero.joaofood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117621639627-nv54mk02osl56mcjlf6lh90sefkdb2kc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.fomezero.joaofood",
+            "certificate_hash": "9764080668d9175cc79de28e9b6530a158c57fc5"
+          }
+        },
+        {
+          "client_id": "117621639627-3vmf05taqo0a0rnnp9eo04evinuamhlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE3C4FNUftQCq5UFOMLXA1Za6kRT_f6k0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117621639627-3vmf05taqo0a0rnnp9eo04evinuamhlq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
