@@ -63,9 +63,9 @@ Temos que pensar mais um pouco!!!!
 
 ## Autores
 
-* [Ana](https://www.linkedin.com/in/michelle-howie-a98358b2/)
+* [Ana Valente](https://github.com/AnaVSSCaldeira)
 * [Jack Tanaka](https://github.com/developersteve/)
-* [Lucas Martions](https://developer.ibm.com/profiles/jritten/)
+* [Lucas Martins](https://github.com/lucaomartins/)
 * [Marcus Mariano](https://github.com/marcusmariano)
 * [Nicole](https://developer.ibm.com/profiles/drnugent/)
 
