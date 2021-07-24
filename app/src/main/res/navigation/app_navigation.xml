@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/chooseAccountTypeFragment"
+        android:name="br.com.fomezero.joaofood.presentation.choosetype.ChooseAccountTypeFragment"
+        android:label="fragment_choose_account_type"
+        tools:layout="@layout/fragment_choose_account_type" >
+        <action
+            android:id="@+id/action_chooseAccountTypeFragment_to_loginMerchantFragment"
+            app:destination="@id/loginMerchantFragment" />
+        <action
+            android:id="@+id/action_chooseAccountTypeFragment_to_loginOngFragment"
+            app:destination="@id/loginOngFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginMerchantFragment"
+        android:name="br.com.fomezero.joaofood.presentation.login.merchant.LoginMerchantFragment"
+        android:label="fragment_login_merchant"
+        tools:layout="@layout/fragment_login_merchant" />
+    <fragment
+        android:id="@+id/loginOngFragment"
+        android:name="br.com.fomezero.joaofood.presentation.login.ong.LoginOngFragment"
+        android:label="fragment_login_ong"
+        tools:layout="@layout/fragment_login_ong" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="br.com.fomezero.joaofood.presentation.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_chooseAccountTypeFragment"
+            app:destination="@id/chooseAccountTypeFragment" />
+    </fragment>
+</navigation>
