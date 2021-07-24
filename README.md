@@ -1,4 +1,4 @@
-# Joao Food App: Fome Zero
+# João Food App: Fome Zero
 
 ![GitHub language count](https://img.shields.io/github/languages/count/lucaomartins/joao-delivery-app)
 ![GitHub top language](https://img.shields.io/github/languages/top/lucaomartins/joao-delivery-app)
