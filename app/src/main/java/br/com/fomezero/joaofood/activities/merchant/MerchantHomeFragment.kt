@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.fomezero.joaofood.R
+import br.com.fomezero.joaofood.activities.ActiveUserData
 import br.com.fomezero.joaofood.model.MerchantData
 import br.com.fomezero.joaofood.model.OngData
 import br.com.fomezero.joaofood.model.Product
@@ -20,7 +21,6 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_merchant_home.addProductButton
 import kotlinx.android.synthetic.main.fragment_merchant_home.productRecyclerView
 import kotlinx.android.synthetic.main.fragment_merchant_home.recyclerView
-import java.math.BigDecimal
 
 
 class MerchantHomeFragment : Fragment() {
@@ -32,26 +32,21 @@ class MerchantHomeFragment : Fragment() {
         Firebase.auth
     }
 
-    private var list = arrayListOf<OngData>(
-        OngData(
-            "Feliz",
-            "1234",
-            "https://s2.glbimg.com/TcOlk_66J_D0a_U34wR81bwawa8=/607x426/smart/e.glbimg.com/og/ed/f/original/2019/10/15/73294822_1403047876514847_2297516901577785344_o.jpg"
-        ), OngData("Comida", "4321")
-    )
+    private var ongList = arrayListOf<OngData>()
     private var productList = arrayListOf<Product>()
     private lateinit var ongAdapter: OngsRecycleViewAdapter
     private lateinit var productAdapter: ProductAdapter
 
     override fun onStart() {
         super.onStart()
-        ongAdapter = OngsRecycleViewAdapter(list, activity!!)
+        ongAdapter = OngsRecycleViewAdapter(ongList, activity!!) {
+            loadFragment(it)
+        }
 
         productAdapter = ProductAdapter(productList, activity!!)
 
 
-        recyclerView.layoutManager =
-            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.itemAnimator = DefaultItemAnimator()
         recyclerView.adapter = ongAdapter
 
@@ -67,6 +62,17 @@ class MerchantHomeFragment : Fragment() {
             startActivity(newProductIntent)
         }
         getProductList()
+
+        ActiveUserData.getOngList(object: ActiveUserData.OngListCallback {
+            override fun onSuccess(ongList: ArrayList<OngData>) {
+                this@MerchantHomeFragment.ongList.clear()
+                this@MerchantHomeFragment.ongList.addAll(ongList)
+                ongAdapter.notifyDataSetChanged()
+            }
+
+            override fun onError(throwable: Throwable) { }
+
+        })
     }
 
     private fun getProductList() {
@@ -94,7 +100,7 @@ class MerchantHomeFragment : Fragment() {
                                             Product(
                                                 product.getString("name") ?: "",
                                                 product.getString("amount") ?: "",
-                                                BigDecimal(product.getString("price") ?: "0"),
+                                                product.getString("price") ?: "0",
                                                 urlList?.first(),
                                                 merchantData
                                             )
@@ -107,6 +113,13 @@ class MerchantHomeFragment : Fragment() {
                     }
                 }
             }
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        transaction?.replace(R.id.container, fragment)
+        transaction?.addToBackStack(null)
+        transaction?.commit()
     }
 
     override fun onCreateView(

@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.fomezero.joaofood.R
 import br.com.fomezero.joaofood.activities.merchant.MerchantHomeActivity
+import br.com.fomezero.joaofood.activities.ong.OngMainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -96,12 +97,12 @@ class LoginActivity : AppCompatActivity() {
                     if (data != null && document != null) {
                         runOnUiThread {
                             val welcomeIndent = when (document.getString("type")) {
-                                "ong" -> Intent(this@LoginActivity, MerchantHomeActivity::class.java)
-
+                                "ong" -> Intent(this@LoginActivity, OngMainActivity::class.java)
                                 "merchant" -> Intent(this@LoginActivity, MerchantHomeActivity::class.java)
 
                                 else -> null
                             }
+                            progressBar.visibility = View.GONE
                             welcomeIndent?.let {
                                 startActivity(it)
                                 this@LoginActivity.finish()

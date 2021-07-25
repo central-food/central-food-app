@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="19dp"
+    tools:context=".activities.merchant.OngInfoFragment">
+
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="ONG Amigos do bem"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:shapeAppearance="@style/ShapeAppearance.ImageView" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Sobre: ONG criada há 27 anos se tornou um dos maiores grupos de voluntários ativos no país, ajudando mais de 75 mil pessoas."
+        android:justificationMode="inter_word"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Endereço: Rua dos Anjos, 123, Bairro da Luz, São Paulo - SP"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mapsButton"
+        android:layout_width="230dp"
+        android:layout_height="55dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/signup_button_border"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Ver no Maps"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:icon="@drawable/ic_outline_remove_red_eye_24" />
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Celular: (11) 99999-9999"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/callButton"
+        android:layout_width="230dp"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/signup_button_border"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Ligar"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:icon="@drawable/ic_outline_remove_red_eye_24" />
+
+</LinearLayout>
