@@ -8,7 +8,6 @@
     android:gravity="center_horizontal"
     tools:context=".activities.merchant.MerchantHomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,6 +27,11 @@
         android:text="Meus produtos que estão fazendo a diferença:"
         android:textColor="@color/black"
         android:textSize="18sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/addProductButton"

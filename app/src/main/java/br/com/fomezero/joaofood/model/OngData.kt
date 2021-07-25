@@ -8,7 +8,3 @@ data class OngData(
     // TODO: Lat log
     val location: String? = null,
 )
-
-fun foo() {
-    val a = OngData("eae", "1234")
-}

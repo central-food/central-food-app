@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".activities.merchant.MerchantProfileFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Perfil"
+        android:layout_marginTop="45dp"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="114dp"
+            android:layout_height="114dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/ShapeAppearance.ImageView"
+            android:src="@drawable/ic_launcher_background" />
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginStart="10dp"
+            android:text="Joao Carlos"
+            android:textColor="@color/black"
+            android:textSize="26sp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/myDataButton"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="16sp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Meus Dados" />
+
+    <Button
+        android:id="@+id/productsButton"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Produtos anunciados" />
+
+    <Button
+        android:id="@+id/accountExitButton"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Sair" />
+
+</LinearLayout>

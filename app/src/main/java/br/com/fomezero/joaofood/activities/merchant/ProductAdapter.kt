@@ -10,23 +10,23 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import br.com.fomezero.joaofood.R
 import br.com.fomezero.joaofood.loadImage
-import br.com.fomezero.joaofood.model.OngData
+import br.com.fomezero.joaofood.model.Product
 
 
-class OngsRecycleViewAdapter(
-    private var ongList: List<OngData>,
+class ProductAdapter(
+    private var productList: List<Product>,
     private var context: Context
-) : RecyclerView.Adapter<OngsRecycleViewAdapter.MyViewHolder>() {
+) : RecyclerView.Adapter<ProductAdapter.MyViewHolder>() {
 
 
     override fun getItemCount(): Int {
-        return ongList.size
+        return productList.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val ong = ongList[position]
-        holder.name.text = ong.name
-        holder.image.loadImage(ong.imageUrl, CircularProgressDrawable(context))
+        val product = productList[position]
+        holder.name.text = product.name
+        holder.image.loadImage(product.imageUrl, CircularProgressDrawable(context))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

@@ -1,4 +1,4 @@
-package br.com.fomezero.joaofood.activities
+package br.com.fomezero.joaofood.activities.ong
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import br.com.fomezero.joaofood.R
+import br.com.fomezero.joaofood.activities.WelcomeNewUserActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore

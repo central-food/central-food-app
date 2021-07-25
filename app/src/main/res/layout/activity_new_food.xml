@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.merchant.NewFoodActivity"
+    tools:context=".activities.merchant.NewProductActivity"
     android:orientation="vertical">
 
     <TextView
@@ -59,7 +59,7 @@
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/productNameField"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="60dp"
                 android:background="@drawable/edit_text_border"
                 android:ems="10"
                 android:inputType="text" />
@@ -77,7 +77,7 @@
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/quantityField"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="60dp"
                 android:background="@drawable/edit_text_border"
                 android:ems="10"
                 android:inputType="text" />
@@ -95,6 +95,7 @@
 
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/categoryField"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:background="@drawable/edit_text_border"
                 android:layout_height="45dp" />
@@ -117,6 +118,7 @@
             android:orientation="horizontal"
             android:layout_marginHorizontal="30dp" >
             <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/donationSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"/>
@@ -129,9 +131,11 @@
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/priceInputLayout"
             android:layout_width="328dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
+            android:visibility="gone"
             android:hint="Preço"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -140,13 +144,14 @@
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/priceField"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="60dp"
                 android:background="@drawable/edit_text_border"
                 android:ems="10"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitProductButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"

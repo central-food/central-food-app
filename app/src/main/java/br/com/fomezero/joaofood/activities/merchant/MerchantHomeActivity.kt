@@ -22,6 +22,11 @@ class MerchantHomeActivity : AppCompatActivity() {
                     loadFragment(MerchantHomeFragment())
                     return@setOnItemSelectedListener true
                 }
+
+                R.id.profile -> {
+                    loadFragment(MerchantProfileFragment())
+                    return@setOnItemSelectedListener true
+                }
             }
 
             return@setOnItemSelectedListener false
