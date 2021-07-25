@@ -109,4 +109,4 @@ Podemos:
 
 ## License
 
-Code and documentation are available according to the GNU GENERAL PUBLIC LICENSE Version 3 (see [LICENSE](https://www.gnu.org/licenses/gpl.html)).
+Code and documentation are available according to the Commons Clause Version 1 (see [LICENSE](https://commonsclause.com/)).
