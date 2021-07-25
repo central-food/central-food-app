@@ -8,5 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="splashBackground">#A1FDDC</color>
+
+    <color name="primaryColor">#23D1A0</color>
+    <color name="neutralColor">#313131</color>
+    <color name="greenColor2">#30C2C7</color>
+    <color name="greenColor1">#30C1C7</color>
     <color name="secondaryColor">#D1D1D1</color>
 </resources>

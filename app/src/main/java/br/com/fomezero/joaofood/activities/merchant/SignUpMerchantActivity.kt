@@ -1,4 +1,4 @@
-package br.com.fomezero.joaofood.activities
+package br.com.fomezero.joaofood.activities.merchant
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,19 +9,26 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.children
 import br.com.fomezero.joaofood.R
-import br.com.fomezero.joaofood.login.SignUpProvider
-import br.com.fomezero.joaofood.model.SignUpData
+import br.com.fomezero.joaofood.activities.WelcomeNewUserActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_sign_up_merchant.completeNameField
 import kotlinx.android.synthetic.main.activity_sign_up_merchant.emailField
 import kotlinx.android.synthetic.main.activity_sign_up_merchant.passwordConfirmationField
 import kotlinx.android.synthetic.main.activity_sign_up_merchant.passwordField
+import kotlinx.android.synthetic.main.activity_sign_up_merchant.phoneNumberField
 import kotlinx.android.synthetic.main.activity_sign_up_merchant.signUpButton
 import kotlinx.android.synthetic.main.activity_sign_up_merchant.textFields
 
 class SignUpMerchantActivity : AppCompatActivity(), View.OnClickListener {
+    private val db: FirebaseFirestore by lazy {
+        Firebase.firestore
+    }
+
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,6 +79,7 @@ class SignUpMerchantActivity : AppCompatActivity(), View.OnClickListener {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+                    saveDataToFirestore()
                     val user = auth.currentUser
 //                    updateUI(user)
                 } else {
@@ -85,6 +93,36 @@ class SignUpMerchantActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
 
+    }
+
+
+    private fun saveDataToFirestore() {
+        val ongData = hashMapOf(
+            "name" to completeNameField.text.toString(),
+            "email" to emailField.text.toString(),
+            "phoneNumber" to phoneNumberField.text.toString(),
+        )
+        db.collection("merchants")
+            .add(ongData)
+            .addOnSuccessListener { documentReference ->
+                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                val userData = hashMapOf(
+                    "email" to emailField.text.toString(),
+                    "type" to "merchant",
+                    "data" to documentReference
+                )
+                db.collection("users")
+                    .add(userData)
+                    .addOnSuccessListener { usersDocumentReference ->
+                        Log.d(TAG, "DocumentSnapshot added with ID: ${usersDocumentReference.id}")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w(TAG, "Error adding document", e)
+                    }
+            }
+            .addOnFailureListener { e ->
+                Log.w(TAG, "Error adding document", e)
+            }
     }
 
 

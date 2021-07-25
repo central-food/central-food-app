@@ -103,6 +103,17 @@
                 android:hint="Celular"
                 android:inputType="phone"
                 android:padding="10dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/websiteField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:hint="Link do site"
+                android:inputType="textUri"
+                android:padding="10dp" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton

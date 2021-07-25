@@ -9,13 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JoaoFood">
-        <activity android:name=".activities.WelcomeNewUserActivity"></activity>
+        <activity android:name=".activities.merchant.MerchantHomeActivity"></activity>
+        <activity android:name=".activities.WelcomeNewUserActivity" />
         <activity android:name=".activities.SignUpOngActivity" />
-        <activity android:name=".activities.SignUpMerchantActivity" />
+        <activity android:name=".activities.merchant.SignUpMerchantActivity" />
         <activity android:name=".activities.LoginActivity" />
         <activity
             android:name=".activities.MainActivity"
-            android:theme="@style/Theme.Splash">
+            android:theme="@style/Theme.JoaoFood">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

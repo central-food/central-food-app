@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.fomezero.joaofood.R
+import br.com.fomezero.joaofood.activities.merchant.SignUpMerchantActivity
 import kotlinx.android.synthetic.main.activity_welcome_new_user.merchantButton
 import kotlinx.android.synthetic.main.activity_welcome_new_user.ongButton
 
