@@ -77,15 +77,21 @@ Podemos:
 
 ![image info](./img/architecture.png)
 
+
+### User Flow Simplificado   
+
+![image info](./img/user_flow_simpli.png)
+
 ### User Flow    
 
-![image info](./img/joao_app.png)
+![image info](./img/user_flow.png)
 
 ### Tecnologias Implementadas    
 
 - Kotlin
 - Flask
 - Firebase
+- Heroku
 
 ---
 
