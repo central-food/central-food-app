@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.merchant.NewFoodActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Novo alimento"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/food_form_border"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="30dp"
+            android:text="Uau! Que bom ver você fazendo a diferença na vida de tantas pessoas!"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="318dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/signup_button_border"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="15sp"
+            android:text="Adicionar foto do produto"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_outline_camera_alt_24" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="Nome do produto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/productNameField"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:hint="Quantidade (Gramas ou quilos)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/quantityField"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Categoria"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/categoryField"
+                android:layout_width="match_parent"
+                android:background="@drawable/edit_text_border"
+                android:layout_height="45dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="30dp"
+            android:text="Aconselhamos a doar o máximo de produtos que puder pois os produtos serão entregues de graça por ONGs."/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="30dp" >
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="De graça! Vou doar :)"
+                android:layout_alignParentEnd="true" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:hint="Preço"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/priceField"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/signup_button_border"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="12dp"
+            android:text="Adicionar produto"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_baseline_add_circle_outline_24" />
+
+    </LinearLayout>
+</LinearLayout>

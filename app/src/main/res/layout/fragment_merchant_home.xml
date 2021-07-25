@@ -3,12 +3,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     tools:context=".activities.merchant.MerchantHomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Início"
+        android:layout_marginTop="45dp"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginHorizontal="58dp"
+        android:layout_marginTop="2dp"
+        android:textAlignment="center"
+        android:text="Meus produtos que estão fazendo a diferença:"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addProductButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:padding="12dp"
+        app:icon="@drawable/ic_baseline_add_circle_outline_24"
+        android:textColor="@color/white"
+        android:text="Adicionar novo produto"
+        android:background="@drawable/signup_button_border"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginHorizontal="58dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:text="ONGs cadastradas:"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="160dp" />
+
+
+
 
 </LinearLayout>
