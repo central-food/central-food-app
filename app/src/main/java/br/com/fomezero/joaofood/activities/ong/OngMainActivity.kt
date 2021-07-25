@@ -23,6 +23,11 @@ class OngMainActivity : AppCompatActivity() {
                     loadFragment(OngProfileFragment())
                     return@setOnItemSelectedListener true
                 }
+
+                R.id.notification -> {
+                    loadFragment(NotificationFragment())
+                    return@setOnItemSelectedListener true
+                }
             }
 
             return@setOnItemSelectedListener false
