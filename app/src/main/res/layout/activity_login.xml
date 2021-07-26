@@ -77,14 +77,16 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/loginButton"
-            android:layout_width="156dp"
-            android:layout_height="53dp"
+            android:layout_width="186dp"
+            android:layout_height="62dp"
+            android:textSize="27sp"
             android:layout_marginTop="76dp"
             android:background="@drawable/login_button_border"
             android:shadowColor="@color/black"
+            android:textAllCaps="false"
             android:text="Entrar"
             android:textColor="@color/white"
-            android:textSize="17sp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -92,15 +94,15 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signUpButton"
-            android:layout_width="156dp"
-            android:layout_height="53dp"
+            android:layout_width="186dp"
+            android:layout_height="62dp"
+            android:textSize="23sp"
             android:layout_marginTop="76dp"
             android:background="@drawable/signup_button_border"
             android:fontFamily="@font/roboto_bold"
             android:shadowColor="@color/black"
             android:text="CADASTRE-SE"
             android:textColor="@color/white"
-            android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"

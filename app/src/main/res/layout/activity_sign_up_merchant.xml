@@ -9,90 +9,150 @@
 
 
     <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="600dp"
-        android:background="@color/secondaryColor"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="25dp"
+        android:paddingTop="25dp"
+        android:background="@drawable/food_form_border"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:paddingHorizontal="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/belgrano"
+            android:textColor="@color/titleColor"
+            android:textSize="35sp"
+            android:text="Cadastre-se!"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/belgrano"
+            android:textColor="@color/titleColor"
+            android:textSize="16sp"
+            android:text="Entre em contato com ONGs incríveis!\nVamos combater a fome juntos!"
+            android:textAlignment="center" />
 
         <LinearLayout
             android:id="@+id/textFields"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:padding="15dp"
+            android:gravity="center"
+            android:background="@color/white"
             android:orientation="vertical">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/completeNameField"
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="328dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
                 android:hint="Nome Completo"
-                android:inputType="textPersonName"
-                android:padding="10dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailField"
-                android:layout_width="match_parent"
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/completeNameField"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
                 android:hint="E-mail"
-                android:inputType="textEmailAddress"
-                android:padding="10dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordField"
-                android:layout_width="match_parent"
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/emailField"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
                 android:hint="Senha"
-                android:inputType="textPassword"
-                android:padding="10dp" />
+                app:passwordToggleEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordConfirmationField"
-                android:layout_width="match_parent"
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/passwordField"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
                 android:hint="Confirme a senha"
-                android:inputType="textPassword"
-                android:padding="10dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/phoneNumberField"
-                android:layout_width="match_parent"
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/passwordConfirmationField"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
                 android:hint="Celular"
-                android:inputType="phone"
-                android:padding="10dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/phoneNumberField"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signUpButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/login_button_border"
-            android:text="Cadastrar"
-            android:textColor="@color/black" />
+            android:layout_width="156dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/signup_button_border"
+            android:fontFamily="@font/roboto_bold"
+            android:shadowColor="@color/black"
+            android:text="CADASTRE-SE"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButton" />
     </LinearLayout>
 
 </LinearLayout>

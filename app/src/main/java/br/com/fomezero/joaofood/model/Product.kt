@@ -5,7 +5,7 @@ import java.math.BigDecimal
 data class Product(
     val name: String,
     val amount: String,
-    val price: BigDecimal,
+    val price: String,
     val imageUrl: String?,
     val merchantData: MerchantData
 )

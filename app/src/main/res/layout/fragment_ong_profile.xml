@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".activities.merchant.MerchantProfileFragment">
+    android:orientation="vertical"
+    tools:context=".activities.ong.OngProfileFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Perfil"
-        android:layout_marginTop="45dp"
         android:textColor="@color/black"
         android:textSize="22sp" />
 
@@ -28,45 +28,46 @@
             android:layout_width="114dp"
             android:layout_height="114dp"
             android:scaleType="centerCrop"
-            app:shapeAppearance="@style/ShapeAppearance.ImageView"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_launcher_background"
+            app:shapeAppearance="@style/ShapeAppearance.ImageView" />
+
         <TextView
             android:id="@+id/profileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
             android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_bold"
             android:text="Joao Carlos"
             android:textColor="@color/black"
-            android:textSize="26sp"/>
+            android:textSize="26sp" />
     </LinearLayout>
 
 
     <Button
         android:id="@+id/myDataButton"
-        android:fontFamily="@font/roboto_bold"
-        android:textSize="16sp"
-        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="Meus Dados" />
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Meus Dados"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/productsButton"
-        android:fontFamily="@font/roboto_bold"
-        android:textSize="16sp"
-        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="Produtos anunciados" />
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Produtos anunciados"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/accountExitButton"
-        android:fontFamily="@font/roboto_bold"
-        android:textSize="16sp"
-        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="Sair" />
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Sair"
+        android:textSize="16sp" />
 
 </LinearLayout>

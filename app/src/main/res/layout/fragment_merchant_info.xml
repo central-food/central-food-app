@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".activities.ong.MerchantInfoFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Dados do comerciante"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:shapeAppearance="@style/ShapeAppearance.ImageView" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginTop="5dp"
+        android:text="Joao Carlos"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Endereço: Rua dos Anjos, 456, Bairro da Luz, São Paulo - SP "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mapsButton"
+        android:layout_width="230dp"
+        android:layout_height="55dp"
+        android:background="@drawable/signup_button_border"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Ver no Maps"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_outline_remove_red_eye_24" />
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Celular: (11) 99999-9999"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/callButton"
+        android:layout_width="230dp"
+        android:layout_height="55dp"
+        android:background="@drawable/signup_button_border"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Ligar"
+        android:layout_margin="5dp"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_outline_remove_red_eye_24" />
+
+</LinearLayout>
