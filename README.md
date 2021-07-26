@@ -91,7 +91,7 @@ Podemos:
 - Kotlin
 - Flask
 - Firebase
-- Heroku
+- IBM Clound Foundry
 
 ---
 
