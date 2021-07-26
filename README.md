@@ -3,7 +3,14 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/lucaomartins/joao-delivery-app)
 ![GitHub top language](https://img.shields.io/github/languages/top/lucaomartins/joao-delivery-app)
 
-Bem vindo ao [João Food](#https:/)!   
+<p align="center">
+  <a href="" rel="noopener">
+ <img src="https://user-images.githubusercontent.com/51249341/126922540-315fa9b6-6989-4c04-9a48-760b0fbcce8d.png" alt="Project logo"></a>
+</p>
+<h3 align="center">Bem vindo ao João Food!</h3>
+
+
+   
 
 ---
 
