@@ -1,8 +1,65 @@
 <resources>
-    <string name="app_name">João Food</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="app_title">João Food</string>
+    <string name="app_name">Central Food</string>
+    <string name="app_title">Central Food</string>
+
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="welcome">Welcome!</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_search_ngo">Search NGO</string>
+    <string name="menu_add_food">New Food</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_search_products">Search Products</string>
+    <string name="menu_notifications">Notifications</string>
+
+    <!--  Add food screen  -->
+    <string name="new_food_intro">Wow! Good to see you making a difference in the lives of so many people!</string>
+    <string name="add_food_image">Add food image</string>
+    <string name="product_name">Product Name</string>
+    <string name="category">Category</string>
+    <string name="donation_text">We advise you to donate as many products as you can as the products will be delivered for free by NGOs.</string>
+    <string name="amount">Amount (Grams or Kilo)</string>
+    <string name="free_donation">Free! I will donate :)</string>
+    <string name="price">Price</string>
+    <string name="register_product">Register Product</string>
+    <string name="sign_up_exclamation">Sign Up!</string>
+    <string name="sign_up_ngo_intro_text">Get in touch with amazing donations!\nLet\'s fight hunger together!</string>
+    <string name="complete_name">Complete Name</string>
+    <string name="ngo_name">NGO Name</string>
+    <string name="ngo_document_number">NGO Document Number</string>
+    <string name="ngo_website">NGO Website</string>
+    <string name="confirm_the_password">Confirm the Password</string>
+    <string name="phone">Phone</string>
+    <string name="sign_up_merchant_intro">Get in touch with amazing NGOs!\nLet\'s fight hunger together!</string>
+    <string name="hello_exclamation">Hello!</string>
+    <string name="welcome_text_intro">Come be part of the change in the world!!</string>
+    <string name="are_you">Are you:</string>
+    <string name="merchant">Merchant</string>
+    <string name="or">OR</string>
+    <string name="ngo">NGO</string>
+    <string name="i_want">I want!</string>
+    <string name="home_merchant_my_products">My products that are making a difference:</string>
+    <string name="new_product">Register new product</string>
+    <string name="registered_ngos">Registered NGOs:</string>
+    <string name="merchant_data">Merchant Data</string>
+    <string name="see_on_maps">See on Maps</string>
+    <string name="call">Call</string>
+    <string name="phone_number">Phone: %s</string>
+    <string name="address_text">Address: %s</string>
+    <string name="my_data">My Data</string>
+    <string name="advertised_products">Advertised products</string>
+    <string name="logout">Logout</string>
+    <string name="email_notification_switch">Receive email alerts whenever they announce something new.</string>
+    <string name="new_notifications">New</string>
+    <string name="ngo_name_placeholder">NGO Friends of Happyness</string>
+    <string name="about_text">About: %s</string>
+    <string name="price_template">$ %s</string>
+    <string name="people_helped">People Helped: %d</string>
+
+
 </resources>

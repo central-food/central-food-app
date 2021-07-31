@@ -3,15 +3,17 @@
     package="br.com.fomezero.joaofood">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.JoaoFood">
-        <activity android:name=".activities.ong.OngMainActivity"></activity>
+        <activity android:name=".activities.ong.OngMainActivity" />
         <activity android:name=".activities.merchant.NewProductActivity" />
         <activity android:name=".activities.merchant.MerchantHomeActivity" />
         <activity android:name=".activities.WelcomeNewUserActivity" />

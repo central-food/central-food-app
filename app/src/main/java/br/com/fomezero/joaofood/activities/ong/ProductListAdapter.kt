@@ -28,7 +28,7 @@ class ProductListAdapter(
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val product = productList[position]
         holder.name.text = product.name
-        holder.price.text = "R$ ${product.price.toDouble()}"
+        holder.price.text = context.getString(R.string.price_template, product.price)
         holder.amount.text = product.amount
         holder.image.loadImage(product.imageUrl, CircularProgressDrawable(context))
         holder.button.setOnClickListener {

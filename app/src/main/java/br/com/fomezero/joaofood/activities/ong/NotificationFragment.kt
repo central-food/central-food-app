@@ -13,9 +13,9 @@ import kotlinx.android.synthetic.main.fragment_notification.notificationRecycleV
 
 class NotificationFragment : Fragment() {
     private var notificationList = arrayListOf(
-        "João Carlos acabou de anunciar Laranja!",
-        "João Carlos anunciou Banana!",
-        "João Carlos anunciou Beterraba!"
+        "John Carlos just announced Orange!",
+        "John Carlos just announced Banana!",
+        "John Carlos just announced Beet!"
     )
     private lateinit var notificationAdapter: NotificationAdapter
 

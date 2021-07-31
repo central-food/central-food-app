@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Perfil"
+        android:text="@string/menu_profile"
         android:textColor="@color/black"
         android:textSize="22sp" />
 
@@ -49,7 +49,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Meus Dados"
+        android:text="@string/my_data"
         android:textSize="16sp" />
 
     <Button
@@ -58,7 +58,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Produtos anunciados"
+        android:text="@string/advertised_products"
         android:textSize="16sp" />
 
     <Button
@@ -67,7 +67,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Sair"
+        android:text="@string/logout"
         android:textSize="16sp" />
 
 </LinearLayout>
