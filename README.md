@@ -65,7 +65,7 @@ Central Food:
 
 ---
 
-## Your solution
+## Our solution
 
 ### Application systematics
 
