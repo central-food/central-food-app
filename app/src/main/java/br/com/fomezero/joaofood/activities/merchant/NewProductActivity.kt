@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import br.com.fomezero.joaofood.R
+import br.com.fomezero.joaofood.activities.ActiveUserData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -116,8 +117,11 @@ class NewProductActivity : AppCompatActivity() {
                                 TAG,
                                 "DocumentSnapshot added with ID: ${usersDocumentReference.id}"
                             )
+                            ActiveUserData.sendNotification(usersDocumentReference.id)
                             runOnUiThread {
-                                Toast.makeText(baseContext, "Produto Adicionado.", Toast.LENGTH_LONG).show()
+                                val intentRegisterConfirmation = Intent(this, RegisterConfirmation::class.java)
+                                startActivity(intentRegisterConfirmation)
+                                finish()
                             }
                             finish()
                         }

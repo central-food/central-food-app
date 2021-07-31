@@ -1,5 +1,6 @@
 package br.com.fomezero.joaofood.activities.merchant
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +27,11 @@ class MerchantHomeActivity : AppCompatActivity() {
                 R.id.profile -> {
                     loadFragment(MerchantProfileFragment())
                     return@setOnItemSelectedListener true
+                }
+
+                R.id.addFood -> {
+                    val newProductIntent = Intent(this, NewProductActivity::class.java)
+                    startActivity(newProductIntent)
                 }
             }
 
