@@ -119,7 +119,7 @@
                         android:layout_height="55dp"
                         android:background="@drawable/edit_text_border"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="textUri" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
