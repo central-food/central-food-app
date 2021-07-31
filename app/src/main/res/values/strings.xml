@@ -14,7 +14,7 @@
     <string name="menu_search_ngo">Search NGO</string>
     <string name="menu_add_food">New Food</string>
     <string name="menu_profile">Profile</string>
-    <string name="menu_search_products">Search Products</string>
+    <string name="menu_search_products">Search Food</string>
     <string name="menu_notifications">Notifications</string>
 
     <!--  Add food screen  -->
@@ -37,8 +37,8 @@
     <string name="phone">Phone</string>
     <string name="sign_up_merchant_intro">Get in touch with amazing NGOs!\nLet\'s fight hunger together!</string>
     <string name="hello_exclamation">Hello!</string>
-    <string name="welcome_text_intro">Come be part of the change in the world!!</string>
-    <string name="are_you">Are you:</string>
+    <string name="welcome_text_intro">Come change the world with us!</string>
+    <string name="are_you">You are:</string>
     <string name="merchant">Merchant</string>
     <string name="or">OR</string>
     <string name="ngo">NGO</string>
@@ -64,7 +64,8 @@
     <string name="back_to_home">Back to Home</string>
     <string name="thank_you">Thank you!</string>
     <string name="pay_attention_to_your_cell_phone">Pay attention to your cell phone, as NGOs can call you at any time!</string>
-    <string name="wooooo_congratulations">Wooooo! Congratulations!</string>
+    <string name="wooooo_congratulations">Woohoo! Congratulations!</string>
+    <string name="food_successfully_registered">Food successfully registered!</string>
 
 
 </resources>
