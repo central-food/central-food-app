@@ -39,8 +39,7 @@ __Central Food__ is an app developed for Call for Code Hackathon 2021. Our obje
 - 127 million tons of food are thrown away each year in Latin America;
 - 41 thousands tons of food are thrown away each year just in Brazil.
 
-Economic and environment damage are among the consequences of this malfunction in food cycle. Hunger is the biggest consequence. It occurs because, when the food is wasted there is an increase in the value of the products and many families are unable to pay for them. The growth of garbage and environmental problems are also informed by specialists as consequences of those losses. In Brazil, this waste occurs in the following stages:
-
+Economic and environment damage are among the consequences of this malfunction in food cycle. Hunger is the biggest consequence. It occurs because, when the food is wasted there is an increase in the value of the products and many families are unable to pay for them. The growth of garbage and environmental problems are also informed by specialists as consequences of those losses. In Brazil, this waste occurs in the followi
 - 50%: During transport and handling;
 - 10%: In the field, where the production processes take place;
 - 10%: In retail and supermarket;
