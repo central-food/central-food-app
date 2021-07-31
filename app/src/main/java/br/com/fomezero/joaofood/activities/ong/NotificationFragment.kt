@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.fomezero.joaofood.R
+import br.com.fomezero.joaofood.activities.ActiveUserData
+import kotlinx.android.synthetic.main.activity_new_food.donationSwitch
 import kotlinx.android.synthetic.main.fragment_notification.notificationRecycleView
+import kotlinx.android.synthetic.main.fragment_notification.notificationSwitch
 
 
 class NotificationFragment : Fragment() {
@@ -34,6 +37,11 @@ class NotificationFragment : Fragment() {
         notificationRecycleView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         notificationRecycleView.itemAnimator = DefaultItemAnimator()
         notificationRecycleView.adapter = notificationAdapter
+
+        notificationSwitch.isChecked = ActiveUserData.getNotificationValue()
+        notificationSwitch.setOnClickListener {
+            ActiveUserData.setNotifications(notificationSwitch.isChecked)
+        }
     }
 
 }
