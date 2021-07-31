@@ -1,4 +1,4 @@
-# João Food App: Fome Zero
+# Central Food App: Zero Hunger
 
 ![GitHub language count](https://img.shields.io/github/languages/count/joao-food/joao-food-app)
 ![GitHub top language](https://img.shields.io/github/languages/top/joao-food/joao-food-app)
