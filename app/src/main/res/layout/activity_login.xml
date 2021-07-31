@@ -32,11 +32,16 @@
             android:fontFamily="@font/belgrano"
             android:text="@string/welcome"
             android:textColor="@color/black"
-            android:textSize="50sp"
+            android:textSize="42sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="90dp"
+            android:src="@mipmap/central_food_logo" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="328dp"

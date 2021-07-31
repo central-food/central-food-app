@@ -59,7 +59,16 @@
         android:layout_height="70dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="@string/advertised_products"
+        android:text="@string/notifications"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/myNgoPage"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/my_ngo_page"
         android:textSize="16sp" />
 
     <Button

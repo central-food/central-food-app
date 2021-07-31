@@ -30,22 +30,22 @@
         app:shapeAppearance="@style/ShapeAppearance.ImageView" />
 
     <TextView
+        android:id="@+id/peopleHelped"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/people_helped"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <TextView
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/about_text"
-        android:textColor="@color/black"
-        android:textSize="19sp" />
-
-    <TextView
-        android:id="@+id/peopleHelped"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/roboto_medium"
-        android:text="@string/people_helped"
         android:textColor="@color/black"
         android:textSize="19sp" />
 

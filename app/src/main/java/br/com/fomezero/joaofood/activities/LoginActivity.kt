@@ -58,7 +58,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (email.isEmpty() or password.isEmpty()) {
             val msg =
-                Toast.makeText(applicationContext, "Preencha todos os campos.", Toast.LENGTH_LONG)
+                Toast.makeText(applicationContext, "Please fill in all fields.", Toast.LENGTH_LONG)
             msg.setGravity(Gravity.CENTER, 0, -400)
             msg.show()
             return
@@ -78,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
                     runOnUiThread {
-                        Toast.makeText(baseContext, "Email ou senha incorretos.", Toast.LENGTH_LONG)
+                        Toast.makeText(baseContext, "Incorrect email or password.", Toast.LENGTH_LONG)
                             .show()
                     }
                 }
