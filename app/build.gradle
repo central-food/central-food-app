@@ -42,7 +42,8 @@ android {
 }
 
 def lifeCycleExtensionVersion = '2.2.0'
-def retrofitVersion = '2.3.0'
+def retrofitVersion = '2.9.0'
+def okHttpVersion = '4.9.0'
 def glideVersion = '4.9.0'
 def rxJavaVersion = '2.1.1'
 def navVersion = '2.1.0-alpha05'
@@ -69,6 +70,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
 
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
