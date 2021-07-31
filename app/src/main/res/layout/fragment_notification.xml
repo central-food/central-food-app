@@ -25,7 +25,7 @@
         android:orientation="horizontal"
         android:layout_marginHorizontal="30dp" >
         <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/donationSwitch"
+            android:id="@+id/notificationSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView

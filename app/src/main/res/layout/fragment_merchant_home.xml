@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
         android:layout_marginHorizontal="58dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="12dp"
         android:textAlignment="center"
         android:text="@string/home_merchant_my_products"
         android:textColor="@color/black"
@@ -59,6 +59,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
+        android:layout_marginTop="12dp"
         android:layout_width="match_parent"
         android:layout_height="160dp" />
 

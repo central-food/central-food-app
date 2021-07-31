@@ -54,12 +54,17 @@
     <string name="my_data">My Data</string>
     <string name="advertised_products">Advertised products</string>
     <string name="logout">Logout</string>
-    <string name="email_notification_switch">Receive email alerts whenever they announce something new.</string>
+    <string name="email_notification_switch">Receive sms alerts whenever they announce something new.</string>
     <string name="new_notifications">New</string>
     <string name="ngo_name_placeholder">NGO Friends of Happyness</string>
     <string name="about_text">About: %s</string>
     <string name="price_template">$ %s</string>
     <string name="people_helped">People Helped: %d</string>
+    <string name="registration_confirmation">Registration confirmation</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="pay_attention_to_your_cell_phone">Pay attention to your cell phone, as NGOs can call you at any time!</string>
+    <string name="wooooo_congratulations">Wooooo! Congratulations!</string>
 
 
 </resources>
