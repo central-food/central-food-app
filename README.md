@@ -20,7 +20,7 @@ Conteúdo
 1. [Introduction](#introduction)
 1. [The problem](#the-problem)
 1. [Market opportunity](#Market-opportunity)
-1. [Your solution](#your-solution)
+1. [Our solution](#our-solution)
 1. [Authors](#authors)
 1. [License](#license)
 
@@ -65,19 +65,19 @@ Central Food:
 
 ---
 
-## Nossa Solução
+## Your solution
 
-### Sistemática do aplicativo
+### Application systematics
 
-1. Comerciante (João) do centro de abastecimento percebe que sobrou x kg de algum alimento, e por isso cadastra os alimentos no app, tira foto do alimento e informa doado ou vendido por um preço pequeno informado por ele;
+1. A merchant at the supply center registers the left over food in the app (in G or KG), takes a photo of the food and informs if this is donated or sold (for a small price informed by him);
 
-1. O app envia notificações e e-mails para todas as ONGs; 
+2. The app sends notifications to all NGOS; 
 
-1. A ONG entra no aplicativo e vê a oportunidade que foi anunciada;
+3. The NGO access the app and see the announced notification;
 
-1. A ONG entra em contato com o comerciante (João) por meio do telefone que encontrou no anúncio e negocia a busca da mercadoria;
+4. The interested NGOs contacts the merchant through the telephone number that appears when he/she clicks on "I want it!" and negotiates with the merchant where he/she can get the food;
 
-1. A ONG vai até o comerciante (João), compra e/ou recebe a mercadoria.
+5. The NGO goes to the merchant and buys or receives the food.
 
 ### The Architecture
 
