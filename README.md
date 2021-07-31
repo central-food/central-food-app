@@ -14,7 +14,7 @@
 
 ---
 
-Conteúdo 
+Contents 
 
 
 1. [Introduction](#introduction)
@@ -81,7 +81,7 @@ Central Food:
 ![image info](./img/architecture.png)
 
 
-### User Flow Simplificado   
+### Simplified User Flow  
 
 ![image info](./img/user_flow_simpli.png)
 
@@ -89,7 +89,7 @@ Central Food:
 
 ![image info](./img/user_flow.png)
 
-### Tecnologias Implementadas    
+### Implemented Technologies   
 
 - Kotlin
 - Flask
