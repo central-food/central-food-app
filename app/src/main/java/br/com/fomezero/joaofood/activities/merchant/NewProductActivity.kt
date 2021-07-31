@@ -13,8 +13,11 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.core.graphics.drawable.toBitmap
 import br.com.fomezero.joaofood.R
 import br.com.fomezero.joaofood.activities.ActiveUserData
+import br.com.fomezero.joaofood.modules.img.domain.api.UploadImageProvider
+import br.com.fomezero.joaofood.modules.img.domain.model.ImgResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -28,6 +31,11 @@ import kotlinx.android.synthetic.main.activity_new_food.priceInputLayout
 import kotlinx.android.synthetic.main.activity_new_food.productNameField
 import kotlinx.android.synthetic.main.activity_new_food.quantityField
 import kotlinx.android.synthetic.main.activity_new_food.submitProductButton
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import java.util.*
+import kotlin.collections.HashMap
 
 
 class NewProductActivity : AppCompatActivity() {
@@ -112,12 +120,27 @@ class NewProductActivity : AppCompatActivity() {
                         "user" to document.reference,
                     )
                     db.collection("products").add(productData)
-                        .addOnSuccessListener { usersDocumentReference ->
+                        .addOnSuccessListener { productReference ->
                             Log.d(
                                 TAG,
-                                "DocumentSnapshot added with ID: ${usersDocumentReference.id}"
+                                "DocumentSnapshot added with ID: ${productReference.id}"
                             )
-                            ActiveUserData.sendNotification(usersDocumentReference.id)
+                            ActiveUserData.sendNotification(productReference.id)
+
+                            GlobalScope.launch(Dispatchers.IO) {
+                                val imgResult = UploadImageProvider.uploadFile(foodImage.drawable.toBitmap(), productReference.id)
+
+                                if (imgResult is ImgResult.Success) {
+                                    val url = imgResult.reponse?.data?.link
+                                    val map = HashMap<String, Any>()
+                                    val array = arrayOf(url)
+                                    map["image"] = Arrays.asList(*array)
+                                    productReference.update(map)
+                                }
+
+                            }
+
+
                             runOnUiThread {
                                 val intentRegisterConfirmation = Intent(this, RegisterConfirmationActivity::class.java)
                                 startActivity(intentRegisterConfirmation)
