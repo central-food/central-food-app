@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="ONG Amigos do bem"
+        android:text="@string/ngo_name_placeholder"
         android:textColor="@color/black"
         android:textSize="22sp" />
 
@@ -31,12 +31,21 @@
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Sobre: ONG criada há 27 anos se tornou um dos maiores grupos de voluntários ativos no país, ajudando mais de 75 mil pessoas."
-        android:justificationMode="inter_word"
+        android:text="@string/about_text"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/peopleHelped"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/people_helped"
         android:textColor="@color/black"
         android:textSize="19sp" />
 
@@ -46,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Endereço: Rua dos Anjos, 123, Bairro da Luz, São Paulo - SP"
+        android:text="@string/address_text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="19sp" />
@@ -58,7 +67,7 @@
         android:layout_margin="15dp"
         android:background="@drawable/signup_button_border"
         android:fontFamily="@font/roboto_bold"
-        android:text="Ver no Maps"
+        android:text="@string/see_on_maps"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:icon="@drawable/ic_outline_remove_red_eye_24" />
@@ -69,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Celular: (11) 99999-9999"
+        android:text="@string/phone_number"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="19sp" />
@@ -82,7 +91,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/signup_button_border"
         android:fontFamily="@font/roboto_bold"
-        android:text="Ligar"
+        android:text="@string/call"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:icon="@drawable/ic_outline_remove_red_eye_24" />

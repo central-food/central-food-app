@@ -1,6 +1,5 @@
 package br.com.fomezero.joaofood.model
 
-import java.math.BigDecimal
 
 data class Product(
     val name: String,

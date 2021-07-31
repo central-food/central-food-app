@@ -1,18 +1,28 @@
 package br.com.fomezero.joaofood.activities.merchant
 
+import android.Manifest
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.os.Build
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import br.com.fomezero.joaofood.R
+import br.com.fomezero.joaofood.activities.ActiveUserData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_new_food.addFoodButton
 import kotlinx.android.synthetic.main.activity_new_food.donationSwitch
+import kotlinx.android.synthetic.main.activity_new_food.foodImage
 import kotlinx.android.synthetic.main.activity_new_food.priceField
 import kotlinx.android.synthetic.main.activity_new_food.priceInputLayout
 import kotlinx.android.synthetic.main.activity_new_food.productNameField
@@ -42,8 +52,35 @@ class NewProductActivity : AppCompatActivity() {
             }
         }
 
+        addFoodButton.setOnClickListener {
+            if (Build.VERSION.SDK_INT < 23) {
+                takePhoto()
+            } else {
+                if (ActivityCompat.checkSelfPermission(
+                        this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE
+                    ) == PackageManager.PERMISSION_GRANTED
+                ) {
+                    takePhoto()
+                } else {
+                    val permissionStorage = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    //Asking request Permissions
+                    ActivityCompat.requestPermissions(this, permissionStorage, 9)
+                }
+            }
+        }
+
         submitProductButton.setOnClickListener {
             onSubmit()
+        }
+    }
+
+    private fun takePhoto() {
+        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        try {
+            startActivityForResult(takePictureIntent, CAMERA_REQUEST)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(this, "Camera is unavailable", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -80,8 +117,11 @@ class NewProductActivity : AppCompatActivity() {
                                 TAG,
                                 "DocumentSnapshot added with ID: ${usersDocumentReference.id}"
                             )
+                            ActiveUserData.sendNotification(usersDocumentReference.id)
                             runOnUiThread {
-                                Toast.makeText(baseContext, "Produto Adicionado.", Toast.LENGTH_LONG).show()
+                                val intentRegisterConfirmation = Intent(this, RegisterConfirmationActivity::class.java)
+                                startActivity(intentRegisterConfirmation)
+                                finish()
                             }
                             finish()
                         }
@@ -96,7 +136,19 @@ class NewProductActivity : AppCompatActivity() {
 
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
+            val photo = data?.extras?.get("data") as Bitmap?
+            foodImage.setImageBitmap(photo)
+            foodImage.visibility = View.VISIBLE
+            // TODO: Send photo do imgur and send url to database
+//            val imageUri = photo?.let { getImageUri(this, it) }
+        }
+    }
+
     companion object {
         private const val TAG = "NewProductActivity"
+        private const val CAMERA_REQUEST = 1888
     }
 }

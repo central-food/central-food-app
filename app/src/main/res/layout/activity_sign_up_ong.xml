@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/food_form_border"
@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/belgrano"
-                android:text="Cadastre-se!"
+                android:text="@string/sign_up_exclamation"
                 android:textAlignment="center"
                 android:textColor="@color/titleColor"
                 android:textSize="35sp" />
@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/belgrano"
-                android:text="Entre em contato com doações incríveis!\nVamos combater a fome juntos!"
+                android:text="@string/sign_up_ngo_intro_text"
                 android:textAlignment="center"
                 android:textColor="@color/titleColor"
                 android:textSize="16sp" />
@@ -53,7 +53,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
-                    android:hint="Nome Completo"
+                    android:hint="@string/complete_name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -71,7 +71,7 @@
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Nome da ONG"
+                    android:hint="@string/ngo_name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -90,7 +90,7 @@
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="CNPJ da ONG"
+                    android:hint="@string/ngo_document_number"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -108,7 +108,7 @@
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Site da ONG"
+                    android:hint="@string/ngo_website"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -119,14 +119,14 @@
                         android:layout_height="55dp"
                         android:background="@drawable/edit_text_border"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="textUri" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="E-mail"
+                    android:hint="@string/e_mail"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -144,7 +144,7 @@
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Senha"
+                    android:hint="@string/password"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -163,7 +163,7 @@
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Confirme a senha"
+                    android:hint="@string/confirm_the_password"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -181,7 +181,7 @@
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="Celular"
+                    android:hint="@string/phone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -205,7 +205,7 @@
                 android:background="@drawable/signup_button_border"
                 android:fontFamily="@font/roboto_bold"
                 android:shadowColor="@color/black"
-                android:text="CADASTRE-SE"
+                android:text="@string/sign_up"
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 android:layout_marginBottom="80dp"

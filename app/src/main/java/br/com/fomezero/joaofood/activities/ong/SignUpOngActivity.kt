@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import br.com.fomezero.joaofood.R
+import br.com.fomezero.joaofood.activities.LoginActivity
 import br.com.fomezero.joaofood.activities.WelcomeNewUserActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -54,7 +55,10 @@ class SignUpOngActivity : AppCompatActivity(), View.OnClickListener {
                 if (task.isSuccessful) {
                     Log.d(TAG, "createUserWithEmail:success")
                     runOnUiThread {
-                        Toast.makeText(baseContext, "Conta criada com sucesso!.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(baseContext, "Successful Sign Up!.", Toast.LENGTH_SHORT).show()
+                        val welcomeNewUserIntent = Intent(this, LoginActivity::class.java)
+                        startActivity(welcomeNewUserIntent)
+                        finish()
                     }
                     val user = auth.currentUser
                     saveDataToFirestore()

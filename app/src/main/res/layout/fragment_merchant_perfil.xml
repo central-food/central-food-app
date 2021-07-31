@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
-        android:text="Perfil"
+        android:text="@string/menu_profile"
         android:layout_marginTop="45dp"
         android:textColor="@color/black"
         android:textSize="22sp" />
@@ -20,6 +20,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -49,7 +50,7 @@
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="Meus Dados" />
+        android:text="@string/my_data" />
 
     <Button
         android:id="@+id/productsButton"
@@ -58,7 +59,7 @@
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="Produtos anunciados" />
+        android:text="@string/advertised_products" />
 
     <Button
         android:id="@+id/accountExitButton"
@@ -67,6 +68,6 @@
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="Sair" />
+        android:text="@string/logout" />
 
 </LinearLayout>

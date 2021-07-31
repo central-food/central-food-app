@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.children
 import br.com.fomezero.joaofood.R
+import br.com.fomezero.joaofood.activities.LoginActivity
 import br.com.fomezero.joaofood.activities.WelcomeNewUserActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
@@ -49,7 +50,7 @@ class SignUpMerchantActivity : AppCompatActivity(), View.OnClickListener {
             if (field is TextInputEditText && field.text.toString().isEmpty()) {
                 val msg = Toast.makeText(
                     applicationContext,
-                    "Por favor preencha todos os campos.",
+                    "Please fill in all fields.",
                     Toast.LENGTH_LONG
                 )
                 msg.setGravity(Gravity.CENTER, 0, 400)
@@ -60,7 +61,7 @@ class SignUpMerchantActivity : AppCompatActivity(), View.OnClickListener {
 
         if (validatePassword().not()) {
             val msg =
-                Toast.makeText(applicationContext, "As senhas estão diferentes.", Toast.LENGTH_LONG)
+                Toast.makeText(applicationContext, "Passwords are different.", Toast.LENGTH_LONG)
             msg.setGravity(Gravity.CENTER, 0, 400)
             msg.show()
             return
@@ -73,11 +74,11 @@ class SignUpMerchantActivity : AppCompatActivity(), View.OnClickListener {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "createUserWithEmail:success")
                     runOnUiThread {
-                        Toast.makeText(
-                            baseContext,
-                            "Conta criada com sucesso!.",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        Toast.makeText(baseContext, "Successful Sign Up!.", Toast.LENGTH_SHORT).show()
+                        val welcomeNewUserIntent = Intent(this, LoginActivity::class.java)
+                        startActivity(welcomeNewUserIntent)
+                        finish()
+
                     }
                     saveDataToFirestore()
                     val user = auth.currentUser

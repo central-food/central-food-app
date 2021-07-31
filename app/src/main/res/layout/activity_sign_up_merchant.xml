@@ -25,7 +25,7 @@
             android:fontFamily="@font/belgrano"
             android:textColor="@color/titleColor"
             android:textSize="35sp"
-            android:text="Cadastre-se!"
+            android:text="@string/sign_up_exclamation"
             android:textAlignment="center" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:fontFamily="@font/belgrano"
             android:textColor="@color/titleColor"
             android:textSize="16sp"
-            android:text="Entre em contato com ONGs incríveis!\nVamos combater a fome juntos!"
+            android:text="@string/sign_up_merchant_intro"
             android:textAlignment="center" />
 
         <LinearLayout
@@ -49,7 +49,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="328dp"
                 android:layout_height="wrap_content"
-                android:hint="Nome Completo"
+                android:hint="@string/complete_name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -67,7 +67,7 @@
                 android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="E-mail"
+                android:hint="@string/e_mail"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -85,7 +85,7 @@
                 android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Senha"
+                android:hint="@string/password"
                 app:passwordToggleEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +104,7 @@
                 android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Confirme a senha"
+                android:hint="@string/confirm_the_password"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -122,7 +122,7 @@
                 android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Celular"
+                android:hint="@string/phone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -146,7 +146,7 @@
             android:background="@drawable/signup_button_border"
             android:fontFamily="@font/roboto_bold"
             android:shadowColor="@color/black"
-            android:text="CADASTRE-SE"
+            android:text="@string/sign_up"
             android:textColor="@color/white"
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"

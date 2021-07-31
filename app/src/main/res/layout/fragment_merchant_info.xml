@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Dados do comerciante"
+        android:text="@string/merchant_data"
         android:textColor="@color/black"
         android:textSize="22sp" />
 
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Endereço: Rua dos Anjos, 456, Bairro da Luz, São Paulo - SP "
+        android:text="@string/address_text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="19sp" />
@@ -55,7 +55,7 @@
         android:layout_height="55dp"
         android:background="@drawable/signup_button_border"
         android:fontFamily="@font/roboto_bold"
-        android:text="Ver no Maps"
+        android:text="@string/see_on_maps"
         android:layout_margin="5dp"
         android:textSize="18sp"
         android:textColor="@color/white"
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Celular: (11) 99999-9999"
+        android:text="@string/phone_number"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="19sp" />
@@ -78,7 +78,7 @@
         android:layout_height="55dp"
         android:background="@drawable/signup_button_border"
         android:fontFamily="@font/roboto_bold"
-        android:text="Ligar"
+        android:text="@string/call"
         android:layout_margin="5dp"
         android:layout_marginTop="15dp"
         android:textSize="18sp"

@@ -9,11 +9,14 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.lang.Exception
+import okhttp3.OkHttpClient
+import okhttp3.Request
 
 object ActiveUserData {
     private const val TAG = "ActiveUserData"
@@ -29,6 +32,9 @@ object ActiveUserData {
     private val auth: FirebaseAuth by lazy {
         Firebase.auth
     }
+    val client: OkHttpClient by lazy { OkHttpClient() }
+
+    private const val NOTIFICATION_URL = "https://joao-food-admin.us-south.cf.appdomain.cloud/send-sms/"
 
 
     fun updateData(callback: UserDataCallback) {
@@ -127,6 +133,24 @@ object ActiveUserData {
                 Log.e(TAG, "getOngList: ", it)
                 callback.onError(it)
             }
+    }
+
+    fun setNotifications(value: Boolean) {
+        data?.reference?.set(hashMapOf("sms_notification" to value), SetOptions.merge())
+    }
+
+    fun getNotificationValue(): Boolean {
+        return data?.getBoolean("sms_notification") ?: false
+    }
+
+    fun sendNotification(documentId: String) {
+        GlobalScope.launch(Dispatchers.IO) {
+            val request: Request = Request.Builder()
+                .url(NOTIFICATION_URL + documentId)
+                .build()
+
+            client.newCall(request).execute()
+        }
     }
 
     fun signOut() {
