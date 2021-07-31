@@ -29,6 +29,8 @@ class OngProfileFragment : Fragment() {
         accountExitButton.setOnClickListener {
             ActiveUserData.signOut()
             val loginIntent = Intent(activity, LoginActivity::class.java)
+            loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(loginIntent)
             activity?.finish()
         }
