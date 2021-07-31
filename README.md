@@ -17,16 +17,16 @@
 Conteúdo 
 
 
-1. [Introdução](#introdução)
-1. [O Problema](#o-problema)
-1. [Oportunidade de Mercado](#oportunidade-de-mercado)
-1. [Nossa Solução](#nossa-solução)
-1. [Autores](#autores)
+1. [Introduction](#introduction)
+1. [The problem](#the-problem)
+1. [Market opportunity](#Market-opportunity)
+1. [Your solution](#your-solution)
+1. [Authors](#authors)
 1. [License](#license)
 
 ---
 
-## Introdução
+## Introduction
 
 O __João Food__ é um app desenvolvido para o __Call for Code Hackathon 2021__ com o objetivo de reduzir o desperdício de alimentos contribuindo assim para a redução da fome.
 O app interliga o comerciante (que chamamos de João), que trabalha em centros de abastecimento e tem que jogar fora alimentos que não foram vendidos todos os dias, e ONGs que combatem a fome, ajudando assim a alimentar pessoas famintas antes dos alimentos se tornarem inconsumíveis.
@@ -34,7 +34,7 @@ O app interliga o comerciante (que chamamos de João), que trabalha em centros d
 
 ---
 
-## O Problema
+## The problem
 
 - Mais de 820 milhões de pessoas passam fome no mundo;
 - 127 milhões de toneladas de alimentos são jogadas fora por ano na América Latina;
@@ -53,16 +53,15 @@ Os maiores números são causados pelo manuseio de transporte e comercializaçã
 
 ---
 
-## Oportunidade de Mercado
+## Market Opportunity
 
-Acreditamos que nosso app trará muitas oportunidades no mercado pois a fome sempre foi um motivo de preocupação para diversas nações, ainda mais hoje, quando pensamos no cenário nacional que foi muito agravado pela pandemia.
-Nosso app trará uma ideia inovadora com altas chances de ajudar pessoas que não podem comprar comida ou ter acesso a elas.
+We believe that our app will bring more market opportunities because the hunger has always been a concern for many nations, even more today. When we think about our national scenario, which was greatly aggravated by the pandemic. Our app will bring an innovative idea with high chances of helping people who can´t buy or have acess to food.
 
-Podemos:
+Central Food:
 
-- Atuar amenizando a fome que foi agravada na pandemia;
-- Ajudar a diminuir o desperdício que tem sido um problema para os centros de abastecimento;
-- Ajudar ONGs a receber um nível maior de alimentos para ajudar o maior número de pessoas por dia.
+- Alleviate the hunger that was aggravated by the pandemic;
+- Reduce the food waste, that has been a problem for supply centers in Brazil;
+- Help NGOs receive more food to help the greatest number of people per day.
 
 ---
 
@@ -103,7 +102,7 @@ Podemos:
 ---
 
 
-## Autores
+## Authors
 
 * [Ana Valente](https://github.com/AnaVSSCaldeira)
 * [Jack Tanaka](https://www.linkedin.com/in/jackeline-tanaka/)
