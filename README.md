@@ -28,28 +28,25 @@ Conteúdo
 
 ## Introduction
 
-O __João Food__ é um app desenvolvido para o __Call for Code Hackathon 2021__ com o objetivo de reduzir o desperdício de alimentos contribuindo assim para a redução da fome.
-O app interliga o comerciante (que chamamos de João), que trabalha em centros de abastecimento e tem que jogar fora alimentos que não foram vendidos todos os dias, e ONGs que combatem a fome, ajudando assim a alimentar pessoas famintas antes dos alimentos se tornarem inconsumíveis.
+__Central Food__ is an app developed for Call for Code Hackathon 2021. Our objectives are reduce the food waste and consequently contribute to reduce hunger. The app connects the merchant, who works in supply centers and has to throw away unsold food everyday, and NGOs that fight hunger and help to feed hungry people before the food becomes  unfit for human consumption.
 
 
 ---
 
 ## The problem
 
-- Mais de 820 milhões de pessoas passam fome no mundo;
-- 127 milhões de toneladas de alimentos são jogadas fora por ano na América Latina;
-- 41 mil toneladas de alimentos são jogadas fora por ano no Brasil.
+- More than 820 million people suffer from hunger in the world;
+- 127 million tons of food are thrown away each year in Latin America;
+- 41 thousands tons of food are thrown away each year just in Brazil.
 
-Os prejuízos econômicos e ao meio ambiente estão entre as consequências desse mau funcionamento do ciclo alimentar.
-A fome é a maior consequência. Ela ocorre porque, ao desperdiçar alimento, há um aumento no valor dos produtos e muitas famílias não conseguem pagar por eles. O crescimento do lixo e dos problemas ambientais também são apontados pelos especialistas como consequências dessas perdas.
-No Brasil, o desperdício acontece nas seguintes etapas:
+Economic and environment damage are among the consequences of this malfunction in food cycle. Hunger is the biggest consequence. It occurs because, when the food is wasted there is an increase in the value of the products and many families are unable to pay for them. The growth of garbage and environmental problems are also informed by specialists as consequences of those losses. In Brazil, this waste occurs in the following stages:
 
-- 50%: No manuseio de transporte;
-- 10%: No campo, onde a produção acontece;
-- 10%: No varejo e supermercados;
-- 30%: Durante a comercialização e o abastecimento.
+- 50%: During transport and handling;
+- 10%: In the field, where the production processes take place;
+- 10%: In retail and supermarket;
+- 30%: During sales and supply.
 
-Os maiores números são causados pelo manuseio de transporte e comercialização e abastecimento, que representam 80% das causas.
+The biggest numbers are caused during transport and handling and during sales and supply, which represent 80% of the causes.
 
 ---
 
