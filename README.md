@@ -67,7 +67,7 @@ Central Food:
 
 1. A merchant at the supply center registers the left over food in the app (in G or KG), takes a photo of the food and informs if this is donated or sold (for a small price informed by him);
 
-2. The app sends notifications to all NGOS; 
+2. The app sends notifications to all NGOs; 
 
 3. The NGO access the app and see the announced notification;
 
