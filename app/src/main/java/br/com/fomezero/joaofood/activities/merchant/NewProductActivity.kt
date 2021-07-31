@@ -119,7 +119,7 @@ class NewProductActivity : AppCompatActivity() {
                             )
                             ActiveUserData.sendNotification(usersDocumentReference.id)
                             runOnUiThread {
-                                val intentRegisterConfirmation = Intent(this, RegisterConfirmation::class.java)
+                                val intentRegisterConfirmation = Intent(this, RegisterConfirmationActivity::class.java)
                                 startActivity(intentRegisterConfirmation)
                                 finish()
                             }
