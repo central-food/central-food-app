@@ -1,7 +1,7 @@
 package br.com.fomezero.joaofood.modules.img.data.repository.imgur
 
 import br.com.fomezero.joaofood.modules.img.domain.model.ImgurUploadJson
-import br.com.fomezero.joaofood.modules.img.util.RetrofitUtil
+import br.com.fomezero.joaofood.util.RetrofitUtil
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Response

@@ -10,10 +10,7 @@ import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import br.com.fomezero.joaofood.R
 import br.com.fomezero.joaofood.activities.ActiveUserData
 import br.com.fomezero.joaofood.activities.LoginActivity
-import br.com.fomezero.joaofood.loadImage
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import br.com.fomezero.joaofood.util.loadImage
 import kotlinx.android.synthetic.main.fragment_merchant_perfil.accountExitButton
 import kotlinx.android.synthetic.main.fragment_merchant_perfil.profileName
 import kotlinx.android.synthetic.main.fragment_merchant_perfil.profilePicture
