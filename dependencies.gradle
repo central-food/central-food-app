@@ -1,0 +1,180 @@
+ext {
+    /** Versions **/
+
+    // libs versions
+    def glideVersion = "4.9.0"
+    def navigationVersion = "2.1.0-alpha05"
+    def coroutinesVersion = "1.4.2"
+    def serializationJsonVersion = "1.2.2"
+    def lifeCycleExtensionVersion = "2.2.0"
+    def koinVersion= "3.1.2"
+
+    // android libs versions
+    def androidCoreVersion = "1.3.2"
+    def androidAppCompatVersion = "1.2.0"
+    def androidConstraintLayoutVersion = "2.0.4"
+    def androidCardViewVersion = "1.0.0"
+    def androidMaterialVersion = "1.4.0"
+
+    // retrofit versions
+    def retrofitVersion = "2.9.0"
+    def okHttpVersion = "4.9.0"
+
+    // firebase versions
+    def firebaseAnalyticsVersion = "19.0.0"
+    def firebaseAuthVersion = "21.0.1"
+    def firebaseFirestoreVersion = "23.0.3"
+    def firebaseBomVersion = "28.3.0"
+
+    // test libs version
+    def junitVersion = "5.7.1"
+    def mockkVersion = "1.9.2"
+
+    //instrumented test libs version
+    def androidTestRunnerVersion = "1.2.0"
+    def junitAndroidTestVersion = "1.2.0"
+    def testEspressoVersion = "3.3.0"
+
+    /** Dependencies **/
+
+    // kotlin dependencies
+    def kotlin = "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    def coroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    def coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    def serializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationJsonVersion"
+
+    // ui libs dependencies
+    def androidCore = "androidx.core:core-ktx:$androidCoreVersion"
+    def androidAppCompat = "androidx.appcompat:appcompat:$androidAppCompatVersion"
+    def androidConstraintLayout = "androidx.constraintlayout:constraintlayout:$androidConstraintLayoutVersion"
+    def androidCardView = "androidx.cardview:cardview:$androidCardViewVersion"
+    def androidMaterial = "com.google.android.material:material:$androidMaterialVersion"
+
+    // navigation dependencies
+    def navigationFragment = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    def navigationUi = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+
+    // lifeCycle dependencies
+    def lifeCycleExtensions = "androidx.lifecycle:lifecycle-extensions:$lifeCycleExtensionVersion"
+    def lifeCycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleExtensionVersion"
+    def lifeCycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleExtensionVersion"
+
+    // firebase dependencies
+    def firebaseAnalytics = "com.google.firebase:firebase-analytics-ktx:$firebaseAnalyticsVersion"
+    def firebaseAuth = "com.google.firebase:firebase-auth-ktx:$firebaseAuthVersion"
+    def firebaseFirestore = "com.google.firebase:firebase-firestore-ktx:$firebaseFirestoreVersion"
+    def firebaseBom = "com.google.firebase:firebase-bom:$firebaseBomVersion"
+
+    // http dependencies
+    def retrofitBase = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    def gson = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    def okHttp = "com.squareup.okhttp3:okhttp:$okHttpVersion"
+
+    // other libs dependencies
+    def glide = "com.github.bumptech.glide:glide:$glideVersion"
+
+    // koin libs dependencies
+    def koin = "io.insert-koin:koin-core:$koinVersion"
+    def koinAndroid = "io.insert-koin:koin-android:$koinVersion"
+    def koinAndroidCompose = "io.insert-koin:koin-androidx-compose:$koinVersion"
+
+    //test libs dependencies
+    def coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+    def junit = "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    def junitEngine = "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+    def mockk = "io.mockk:mockk:$mockkVersion"
+    def koinTest = "io.insert-koin:koin-test:$koinVersion"
+    def koinTestJunit = "io.insert-koin:koin-test-junit5:$koinVersion"
+
+    //instrumented libs test
+    def androidRunner = "androidx.test:runner:$androidTestRunnerVersion"
+    def junitAndroidTestCore = "de.mannodermaus.junit5:android-test-core:$junitAndroidTestVersion"
+    def junitAndroidTestRunner = "de.mannodermaus.junit5:android-test-runner:$junitAndroidTestVersion"
+    def androidMockk = "io.mockk:mockk-android:$mockkVersion"
+    def testEspresso = "androidx.test.espresso:espresso-core:$testEspressoVersion"
+
+    def firebaseDependencies = [
+            [configuration: "implementation", dependency: firebaseAnalytics],
+            [configuration: "implementation", dependency: firebaseAuth],
+            [configuration: "implementation", dependency: firebaseFirestore],
+            [configuration: "implementation", dependency: firebaseBom],
+    ]
+
+    def retrofitDependencies = [
+            [configuration: "implementation", dependency: retrofitBase],
+            [configuration: "implementation", dependency: gson],
+            [configuration: "implementation", dependency: okHttp],
+    ]
+
+    def uiDependencies = [
+            [configuration: "implementation", dependency: androidCore],
+            [configuration: "implementation", dependency: androidAppCompat],
+            [configuration: "implementation", dependency: androidConstraintLayout],
+            [configuration: "implementation", dependency: androidCardView],
+            [configuration: "implementation", dependency: androidMaterial],
+    ]
+
+    def lifeCycleDependencies = [
+            [configuration: "implementation", dependency: lifeCycleExtensions],
+            [configuration: "implementation", dependency: lifeCycleViewModel],
+            [configuration: "implementation", dependency: lifeCycleLiveData],
+    ]
+
+    def navigationDependencies = [
+            [configuration: "implementation", dependency: navigationFragment],
+            [configuration: "implementation", dependency: navigationUi],
+    ]
+
+    def glideDependencies = [
+            [configuration: "implementation", dependency: glide],
+    ]
+
+    def koinDependencies = [
+            [configuration: "implementation", dependency: koin],
+            [configuration: "implementation", dependency: koinAndroid],
+            [configuration: "implementation", dependency: koinAndroidCompose],
+    ]
+
+    def kotlinDependencies = [
+            [configuration: "implementation", dependency: kotlin],
+            [configuration: "implementation", dependency: coroutineCore],
+            [configuration: "implementation", dependency: coroutinesAndroid],
+            [configuration: "implementation", dependency: serializationJson],
+    ]
+
+
+    def testDependencies = [
+            [configuration: "testImplementation", dependency: mockk],
+            [configuration: "testImplementation", dependency: coroutineTest],
+            [configuration: "testImplementation", dependency: junit],
+            [configuration: "testImplementation", dependency: koinTest],
+            [configuration: "testImplementation", dependency: koinTestJunit],
+            [configuration: "testRuntimeOnly", dependency: junitEngine],
+    ]
+
+    def instrumentedTestDependencies = [
+            [configuration: "androidTestImplementation", dependency: androidRunner],
+            [configuration: "androidTestImplementation", dependency: junit],
+            [configuration: "androidTestImplementation", dependency: junitAndroidTestCore],
+            [configuration: "androidTestRuntimeOnly", dependency: junitAndroidTestRunner],
+            [configuration: "androidTestImplementation", dependency: androidMockk],
+    ]
+
+    versions = [
+        compileSdkVersion: 30,
+        buildToolsVersion: "30.0.3",
+        minSdkVersion: 21,
+        targetSdkVersion: 30,
+    ]
+
+    centralFoodDependencies = firebaseDependencies +
+            retrofitDependencies +
+            uiDependencies +
+            glideDependencies +
+            kotlinDependencies +
+            lifeCycleDependencies +
+            navigationDependencies +
+            koinDependencies +
+            testDependencies +
+            instrumentedTestDependencies
+}
