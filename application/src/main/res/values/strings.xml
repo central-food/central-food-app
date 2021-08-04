@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Central Food</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome">Welcome to</string>
+    <string name="insert_your_email">Insert your e-mail</string>
+    <string name="central_food_logo">Central Food Logo</string>
+    <string name="forgot_your_password">Forgot your password?</string>
 </resources>

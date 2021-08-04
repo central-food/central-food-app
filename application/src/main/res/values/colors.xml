@@ -11,6 +11,7 @@
     <color name="primary">#23D1A0</color>
     <color name="neutral">#313131</color>
     <color name="secondaryDark">#30C2C7</color>
+    <color name="secondaryDarkTransparency">#2B30C2C7</color>
     <color name="secondaryLight">#EDFFF1</color>
 
 </resources>

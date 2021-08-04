@@ -29,9 +29,6 @@ class LoginFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.button.setOnClickListener {
-            viewModel.signIn()
-        }
     }
 
     companion object {
