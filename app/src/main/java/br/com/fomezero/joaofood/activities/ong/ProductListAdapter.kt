@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import br.com.fomezero.joaofood.R
-import br.com.fomezero.joaofood.loadImage
+import br.com.fomezero.joaofood.util.loadImage
 import br.com.fomezero.joaofood.model.Product
 import com.google.android.material.button.MaterialButton
 

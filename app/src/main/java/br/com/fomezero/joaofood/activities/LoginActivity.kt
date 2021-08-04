@@ -11,7 +11,6 @@ import br.com.fomezero.joaofood.R
 import br.com.fomezero.joaofood.activities.merchant.MerchantHomeActivity
 import br.com.fomezero.joaofood.activities.ong.OngMainActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.emailField

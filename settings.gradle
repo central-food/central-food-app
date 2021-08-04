@@ -1,2 +1,3 @@
-rootProject.name = "João Food"
+rootProject.name = "Central Food"
 include ':app'
+include ':application'
