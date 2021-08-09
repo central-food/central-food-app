@@ -3,6 +3,21 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="email"
+            type="String" />
+
+        <variable
+            name="password"
+            type="String" />
+
+        <variable
+            name="listener"
+            type="br.com.fomezero.centralfood.presentation.login.LoginClickListener" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -92,6 +107,7 @@
                                 android:background="@drawable/input_box_border"
                                 android:ems="10"
                                 android:inputType="textEmailAddress"
+                                android:text="@={email}"
                                 app:placeholderText="@string/insert_your_email" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,6 +128,7 @@
                                 android:layout_height="55dp"
                                 android:background="@drawable/input_box_border"
                                 android:ems="10"
+                                android:text="@={password}"
                                 android:inputType="textPassword" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -135,6 +152,7 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/loginButton"
+                    android:onClick="@{() -> listener.onClickLogin(email, password)}"
                     android:layout_width="186dp"
                     android:layout_height="62dp"
                     android:layout_marginTop="22dp"
