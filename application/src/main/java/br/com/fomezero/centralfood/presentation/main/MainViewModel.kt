@@ -7,7 +7,7 @@ import br.com.fomezero.centralfood.domain.auth.Auth
 
 class MainViewModel(private val auth: Auth) : ViewModel() {
     fun initialAuthentication(view: View) {
-        val action = if (auth.getCurrentUser()?.isAuthenticated == true) {
+        val action = if (auth.getCurrentUser() != null) {
             MainFragmentDirections.actionToMerchantFragment()
         } else {
             MainFragmentDirections.actionToLoginFragment()
