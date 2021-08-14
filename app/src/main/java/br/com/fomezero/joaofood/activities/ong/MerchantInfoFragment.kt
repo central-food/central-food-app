@@ -14,7 +14,7 @@ import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import br.com.fomezero.joaofood.R
-import br.com.fomezero.joaofood.loadImage
+import br.com.fomezero.joaofood.util.loadImage
 import br.com.fomezero.joaofood.model.Product
 import kotlinx.android.synthetic.main.fragment_merchant_info.*
 import kotlinx.android.synthetic.main.fragment_ong_info.callButton

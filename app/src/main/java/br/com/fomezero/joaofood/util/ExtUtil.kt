@@ -1,14 +1,10 @@
-package br.com.fomezero.joaofood
+package br.com.fomezero.joaofood.util
 
-import android.content.Context
-import android.graphics.Bitmap
-import android.net.Uri
-import android.provider.MediaStore
 import android.widget.ImageView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import br.com.fomezero.joaofood.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import java.io.ByteArrayOutputStream
 
 
 fun ImageView.loadImage(uri: String?, progressDrawable: CircularProgressDrawable) {
@@ -21,12 +17,4 @@ fun ImageView.loadImage(uri: String?, progressDrawable: CircularProgressDrawable
         .setDefaultRequestOptions(options)
         .load(uri)
         .into(this)
-}
-
-fun getImageUri(inContext: Context, inImage: Bitmap): Uri? {
-    val bytes = ByteArrayOutputStream()
-    inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
-    val path =
-        MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null)
-    return Uri.parse(path)
 }

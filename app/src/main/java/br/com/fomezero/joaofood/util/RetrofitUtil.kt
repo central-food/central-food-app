@@ -1,4 +1,4 @@
-package br.com.fomezero.joaofood.modules.img.util
+package br.com.fomezero.joaofood.util
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

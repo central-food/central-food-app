@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="email"
+            type="String" />
+
+        <variable
+            name="password"
+            type="String" />
+
+        <variable
+            name="listener"
+            type="br.com.fomezero.centralfood.presentation.login.LoginClickListener" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".presentation.login.LoginFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:context=".activities.LoginActivity">
+
+                <TextView
+                    android:id="@+id/welcomeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bellota_regular"
+                    android:text="@string/welcome"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/loginWidget"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/loginWidget"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_max="500dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/rounded_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/loginButton"
+                    app:layout_constraintTop_toBottomOf="@+id/welcomeTextView">
+
+                    <ImageView
+                        android:id="@+id/logoText"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/central_food_logo"
+                        android:src="@drawable/ic_logo_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/loginForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:background="@color/white"
+                        android:padding="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/logoText">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/emailInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:placeholderText="@string/insert_your_email">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/emailField"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@drawable/input_box_border"
+                                android:ems="10"
+                                android:inputType="textEmailAddress"
+                                android:text="@={email}"
+                                app:placeholderText="@string/insert_your_email" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:hint="@string/password"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/emailInputLayout"
+                            app:passwordToggleEnabled="true"
+                            app:placeholderText="@string/password">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/passwordField"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@drawable/input_box_border"
+                                android:ems="10"
+                                android:text="@={password}"
+                                android:inputType="textPassword" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/forgot_your_password"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/loginForm" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/loginButton"
+                    android:onClick="@{() -> listener.onClickLogin(email, password)}"
+                    android:layout_width="186dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/secondary_dark_button_border"
+                    android:shadowColor="@color/black"
+                    android:text="@string/login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toTopOf="@id/signUpButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginWidget" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/are_you_new_here"
+                    android:layout_marginBottom="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/signUpButton"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/signUpButton"
+                    android:layout_width="186dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/primary_button_background"
+                    android:shadowColor="@color/black"
+                    android:text="@string/sign_up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
