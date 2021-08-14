@@ -13,22 +13,30 @@
             android:id="@+id/action_to_loginFragment"
             app:destination="@id/loginFragment"
             app:launchSingleTop="true"
-            app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_to_merchantFragment"
             app:destination="@id/merchantFragment"
             app:launchSingleTop="true"
-            app:popUpTo="@id/merchantFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="br.com.fomezero.centralfood.presentation.login.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_merchantFragment"
+            app:destination="@id/merchantFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_ngoFragment"
+            app:destination="@id/ngoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/merchantFragment"
         android:name="br.com.fomezero.centralfood.presentation.merchant.MerchantFragment"
         android:label="merchant_fragment"
         tools:layout="@layout/merchant_fragment" />
+    <fragment android:id="@+id/ngoFragment" />
 </navigation>
