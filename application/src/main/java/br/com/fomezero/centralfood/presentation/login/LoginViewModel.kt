@@ -7,10 +7,13 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavDirections
 import br.com.fomezero.centralfood.domain.auth.Auth
 import br.com.fomezero.centralfood.domain.auth.AuthExceptions
+import br.com.fomezero.centralfood.exceptions.UserNotFoundException
+import br.com.fomezero.centralfood.model.UserType
+import br.com.fomezero.centralfood.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class LoginViewModel(private val auth: Auth) : ViewModel(), LoginClickListener {
+class LoginViewModel(private val auth: Auth, private val userRepository: UserRepository) : ViewModel(), LoginClickListener {
 
     val invalidEmailOrPassword = MutableLiveData<Boolean>()
     val emptyField = MutableLiveData<Boolean>()
@@ -43,8 +46,17 @@ class LoginViewModel(private val auth: Auth) : ViewModel(), LoginClickListener {
 
             val user = result.getOrNull()
             if (user != null) {
-                // TODO: Implement account type business logic
-                loginSuccessAction.postValue(LoginFragmentDirections.actionLoginFragmentToMerchantFragment())
+                try {
+                    val userData = userRepository.getUserData(user)
+                    val action = when (userData.userType) {
+                        UserType.MERCHANT -> LoginFragmentDirections.actionLoginFragmentToMerchantFragment()
+                        UserType.NGO -> LoginFragmentDirections.actionLoginFragmentToNgoFragment()
+                    }
+                    loginSuccessAction.postValue(action)
+                } catch (e: UserNotFoundException) {
+                    Log.e(TAG, "onClickLogin: User data not found", e)
+                    unexpectedError.postValue(true)
+                }
             } else {
                 unexpectedError.postValue(true)
             }

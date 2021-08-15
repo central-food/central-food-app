@@ -19,6 +19,9 @@
             app:destination="@id/merchantFragment"
             app:launchSingleTop="true"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_ngoFragment"
+            app:destination="@id/ngoFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
