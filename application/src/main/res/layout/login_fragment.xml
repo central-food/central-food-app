@@ -84,20 +84,33 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="9dp"
-                        android:background="@color/white"
-                        android:padding="8dp"
+                        android:background="@drawable/rounded_white_background"
+                        android:padding="6dp"
+                        android:layout_margin="5dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/logoText">
+
+                        <TextView
+                            android:id="@+id/emailText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/email"
+                            android:textColor="@color/textDark"
+                            android:textSize="15sp"
+                            app:textFontWeight="600"
+                            app:layout_constraintBottom_toTopOf="@id/emailInputLayout"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/emailInputLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/email"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/emailText"
                             app:placeholderText="@string/insert_your_email">
 
                             <androidx.appcompat.widget.AppCompatEditText
@@ -108,19 +121,35 @@
                                 android:ems="10"
                                 android:inputType="textEmailAddress"
                                 android:text="@={email}"
+                                android:hint="@string/insert_your_email"
                                 app:placeholderText="@string/insert_your_email" />
                         </com.google.android.material.textfield.TextInputLayout>
 
+
+                        <TextView
+                            android:id="@+id/passwordText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/password"
+                            android:textColor="@color/textDark"
+                            android:layout_marginTop="24dp"
+                            android:textSize="15sp"
+                            app:textFontWeight="600"
+                            app:layout_constraintBottom_toTopOf="@id/passwordInputLayout"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/emailInputLayout" />
+
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passwordInputLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="32dp"
-                            android:hint="@string/password"
+
+
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/emailInputLayout"
-                            app:passwordToggleEnabled="true"
-                            app:placeholderText="@string/password">
+                            app:layout_constraintTop_toBottomOf="@id/passwordText"
+                            app:passwordToggleEnabled="true">
 
                             <androidx.appcompat.widget.AppCompatEditText
                                 android:id="@+id/passwordField"
@@ -129,6 +158,7 @@
                                 android:background="@drawable/input_box_border"
                                 android:ems="10"
                                 android:text="@={password}"
+                                android:hint="@string/password_hint"
                                 android:inputType="textPassword" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -139,7 +169,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="8dp"
                         android:fontFamily="@font/roboto"
                         android:text="@string/forgot_your_password"
                         android:textSize="16sp"

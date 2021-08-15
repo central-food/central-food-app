@@ -13,5 +13,6 @@
     <color name="secondaryDark">#30C2C7</color>
     <color name="secondaryDarkTransparency">#2B30C2C7</color>
     <color name="secondaryLight">#EDFFF1</color>
+    <color name="textDark">#175E61</color>
 
 </resources>
