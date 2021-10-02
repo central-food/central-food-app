@@ -13,4 +13,10 @@
     <string name="invalid_login_toast">Invalid email or password</string>
     <string name="unexpected_error_toast">Unexpected error</string>
     <string name="empty_field_toast">Please type your email and password</string>
+    <string name="hello">Hello!</string>
+    <string name="come_change_the_world_with_us">Come change the world with us!</string>
+    <string name="you_are">You are:</string>
+    <string name="merchant">Merchant</string>
+    <string name="or">OR</string>
+    <string name="ngo">NGO</string>
 </resources>

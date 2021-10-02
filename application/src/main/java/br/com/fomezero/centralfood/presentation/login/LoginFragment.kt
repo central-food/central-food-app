@@ -26,6 +26,10 @@ class LoginFragment : Fragment() {
 
         binding.listener = viewModel
 
+        binding.signUpButton.setOnClickListener {
+            Navigation.findNavController(requireView()).navigate(LoginFragmentDirections.welcomeFragment())
+        }
+
         return binding.root
     }
 
