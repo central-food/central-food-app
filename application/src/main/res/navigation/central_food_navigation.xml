@@ -36,7 +36,7 @@
             android:id="@+id/action_loginFragment_to_ngoFragment"
             app:destination="@id/ngoFragment" />
         <action
-            android:id="@+id/welcomeFragment"
+            android:id="@+id/action_login_to_welcomeFragment"
             app:destination="@id/welcomeFragment" />
     </fragment>
     <fragment
@@ -45,18 +45,27 @@
         android:label="merchant_fragment"
         tools:layout="@layout/merchant_fragment" />
     <fragment android:id="@+id/ngoFragment" />
+
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="br.com.fomezero.centralfood.presentation.signup.WelcomeFragment"
         android:label="welcome_fragment"
         tools:layout="@layout/welcome_fragment" >
         <action
-            android:id="@+id/merchantSignUpFragment"
-            app:destination="@id/merchantSignUpFragment" />
-        <action
-            android:id="@+id/ngoSignUpFragment"
+            android:id="@+id/action_to_ngoSignUpFragment"
             app:destination="@id/ngoSignUpFragment" />
+        <action
+            android:id="@+id/action_to_merchantSignUpFragment"
+            app:destination="@id/merchantSignUpFragment" />
     </fragment>
-    <fragment android:id="@+id/merchantSignUpFragment" />
+
+
+
     <fragment android:id="@+id/ngoSignUpFragment" />
+
+    <fragment
+        android:id="@+id/merchantSignUpFragment"
+        android:name="br.com.fomezero.centralfood.presentation.signup.MerchantSignUpFragment"
+        android:label="merchant_sign_up_fragment"
+        tools:layout="@layout/merchant_sign_up_fragment" />
 </navigation>

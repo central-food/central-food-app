@@ -4,6 +4,7 @@ import br.com.fomezero.centralfood.domain.auth.Auth
 import br.com.fomezero.centralfood.domain.auth.AuthImpl
 import br.com.fomezero.centralfood.presentation.login.LoginViewModel
 import br.com.fomezero.centralfood.presentation.main.MainViewModel
+import br.com.fomezero.centralfood.presentation.signup.NGOSignUpViewModel
 import br.com.fomezero.centralfood.repository.UserRepository
 import br.com.fomezero.centralfood.repository.UserRepositoryImpl
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -24,5 +25,9 @@ val mainModule = module {
 
     viewModel {
         LoginViewModel(get(), get())
+    }
+
+    viewModel {
+        NGOSignUpViewModel(get(), get())
     }
 }

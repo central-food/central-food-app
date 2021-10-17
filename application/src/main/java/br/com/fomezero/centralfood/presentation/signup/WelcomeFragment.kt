@@ -20,11 +20,11 @@ class WelcomeFragment : Fragment() {
         _binding = WelcomeFragmentBinding.inflate(inflater, container, false)
 
         binding.merchantButton.setOnClickListener {
-            Navigation.findNavController(requireView()).navigate(WelcomeFragmentDirections.merchantSignUpFragment())
+            Navigation.findNavController(requireView()).navigate(WelcomeFragmentDirections.actionToMerchantSignUpFragment())
         }
 
         binding.ngoButton.setOnClickListener {
-            Navigation.findNavController(requireView()).navigate(WelcomeFragmentDirections.ngoSignUpFragment())
+            Navigation.findNavController(requireView()).navigate(WelcomeFragmentDirections.actionToNgoSignUpFragment())
         }
 
         return binding.root

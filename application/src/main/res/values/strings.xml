@@ -19,4 +19,8 @@
     <string name="merchant">Merchant</string>
     <string name="or">OR</string>
     <string name="ngo">NGO</string>
+    <string name="register_now">Register now!</string>
+    <string name="register_subtitle">Get in touch with amazing NGOs!\nLet\'s fight hunger together!</string>
+    <string name="full_name">Full name</string>
+    <string name="full_name_hint">Insert here your full name</string>
 </resources>
