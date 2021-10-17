@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InputTextLayout">
+        <attr name="inputTitle" format="string" localization="suggested"/>
+        <attr name="inputHint" format="string" localization="suggested"/>
+        <attr name="inputText" format="string"/>
+        <attr name="inputType" format="string"/>
+    </declare-styleable>
+</resources>
