@@ -9,7 +9,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto"
-        android:text="Title"
         android:labelFor="@id/inputLayout"
         android:textColor="@color/textDark"
         android:textSize="15sp" />
@@ -28,8 +27,7 @@
             android:background="@drawable/input_box_border"
             android:ems="10"
             android:paddingVertical="16dp"
-            android:gravity="center_vertical"
-            android:inputType="textEmailAddress" />
+            android:gravity="center_vertical" />
 
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>

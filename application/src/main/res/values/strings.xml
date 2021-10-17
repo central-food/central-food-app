@@ -23,4 +23,8 @@
     <string name="register_subtitle">Get in touch with amazing NGOs!\nLet\'s fight hunger together!</string>
     <string name="full_name">Full name</string>
     <string name="full_name_hint">Insert here your full name</string>
+    <string name="email_title">E-mail</string>
+    <string name="email_hint">Insert your e-mail</string>
+    <string name="password_signup_hint">Create a password</string>
+    <string name="confirm_your_password">Confirm your password</string>
 </resources>

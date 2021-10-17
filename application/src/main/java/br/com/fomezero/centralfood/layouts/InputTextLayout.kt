@@ -19,7 +19,8 @@ class InputTextLayout(
         context.obtainStyledAttributes(attributes, R.styleable.InputTextLayout).let {
             binding.apply {
                 title.text = it.getString(R.styleable.InputTextLayout_inputTitle).orEmpty()
-                field.setHint(it.getString(R.styleable.InputTextLayout_inputHint).orEmpty())
+                field.hint = it.getString(R.styleable.InputTextLayout_inputHint).orEmpty()
+                field.inputType = it.getInt(R.styleable.InputTextLayout_inputType, 0)
                 field.setText(it.getString(R.styleable.InputTextLayout_inputText).orEmpty())
             }
 
