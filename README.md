@@ -103,7 +103,7 @@ Central Food:
 
 * [Ana Valente](https://github.com/AnaVSSCaldeira)
 * [Jack Tanaka](https://www.linkedin.com/in/jackeline-tanaka/)
-* [Lucas Martins](https://github.com/lucaomartins/)
+* [Luísa Martins](https://github.com/lomartins/)
 * [Marcus Mariano](https://github.com/marcusmariano)
 * [Nicole Silveira Manoel](https://www.linkedin.com/in/nicole-silveira-manoel-b04b8b159/)
 
